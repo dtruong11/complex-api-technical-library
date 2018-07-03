@@ -151,6 +151,7 @@ function deleteAuthor(req, res, next) {
       errors: data.errors
     })
   }
+  
 
   res.status(200).json({
     data
