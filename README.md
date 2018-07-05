@@ -21,10 +21,6 @@ Include nested resources
 * Last Name: (String) Last name of the author. Required.
 * Authors will have different IDs even if they have the same first and last name.
 
-### RESTful routes can:
-Create, Read, Update, and Delete books
-Create, Read, Update, and Delete authors through books
-
 ### CRUD actions on books
 * GET /books -> returns all books as an array of objects
 * GET /books/:id -> returns a single book resource
