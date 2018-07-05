@@ -36,7 +36,7 @@ function createBook(body) {
     return {
       authorId: uuid(),
       firstName: el.split(' ')[0],
-      lastName: el.split(' ')[1]
+      lastName: el.split(' ').slice(1).join()
     }
   })
   const book = {
@@ -64,7 +64,7 @@ function updateBook(id, body) {
     return {
       authorId: uuid(),
       firstName: el.split(' ')[0],
-      lastName: el.split(' ')[1]
+      lastName: el.split(' ').slice(1).join()
     }
   })
   const book = books.find(el => el.id === id)
@@ -124,10 +124,10 @@ function createAuthor(id, body) {
     return {
       authorId: uuid(),
       firstName: el.split(' ')[0],
-      lastName: el.split(' ')[1]
+      lastName: el.split(' ').slice(1).join()
     }
   })
-  book.authors.push(newAuthorArr)
+  book.authors = book.authors.concat(newAuthorArr)
   return newAuthorArr
 }
 
